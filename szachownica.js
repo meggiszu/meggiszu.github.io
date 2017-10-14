@@ -29,11 +29,12 @@ document.addEventListener("DOMContentLoaded", function(e) {
 		for(var x=0;x<8;x++) {
 			var el = row[x]
 		  var el_html;
+		  var coord = x.toString() + "," + y.toString()
 
 			if (el) {
-				el_html = "<div class='boxW'></div>"
+				el_html = "<div class='boxW button' coord='" + coord + "'></div>"
 			} else {
-				el_html = "<div class='boxB'></div>"
+				el_html = "<div class='boxB button' coord='" + coord + "'></div>"
 			}
 			row_html += el_html
 		}
@@ -43,4 +44,17 @@ document.addEventListener("DOMContentLoaded", function(e) {
 	}
 
 	document.getElementById("szachownica").innerHTML = container
+	var buttons = document.getElementsByClassName("button")
+
+	for(var b=0;b<buttons.length;b++) {
+		var button = buttons[b]
+		
+	  button.addEventListener('click', function(e) {
+	  	var el = e.target
+	  	var coord = el.attributes.coord.value;
+	  	document.getElementById("coord").innerHTML = coord
+	  })
+	}
 });
+
+

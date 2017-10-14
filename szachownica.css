@@ -19,6 +19,10 @@ margin-right: auto;
 	background-color: white;
 	height: 45px;
 	width: 45px;
+	-webkit-transform:skew(4deg,4deg); 
+	-moz-transform:skew(4deg,4deg); 
+	-o-transform:skew(4deg,4deg); 
+	transform:skew(150deg,15deg); 
 	border: 1px solid black;
 	font color: white;
 
@@ -30,5 +34,9 @@ margin-right: auto;
 	background-color: black;
 	height: 45px;
 	width: 45px;
+	-webkit-transform:skew(4deg,4deg); 
+-moz-transform:skew(4deg,4deg); 
+-o-transform:skew(4deg,4deg); 
+transform:skew(15deg,15deg); 
 	border: 1px solid black;
 }
