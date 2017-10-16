@@ -1,8 +1,13 @@
 document.addEventListener("DOMContentLoaded", function(e) {
+  var inputs = Array.from(document.getElementsByTagName("input"))
+  
+  inputs.forEach(function(el, i) {
+    el.addEventListener('click', function(e) {
+      document.getElementById("demo").setAttribute('style', "display: none")
+    });
+  })
+
   function calculate(a, b, c) {
-    //document.write("Parametry równania: <br />");
-    //document.write("a = "+ a + ", b = " + b +", c = " + c +"  <br />");
- 
     if (a == 0) {
       var an = "To nie jest równanie kwadratowe: a = 0!"
       document.getElementById("demo").innerHTML = an
@@ -20,13 +25,13 @@ document.addEventListener("DOMContentLoaded", function(e) {
         document.getElementById("demo").innerHTML = wn 
       } else {
         var wynik1 = (- b + Math.sqrt(delta)) / 2 * a;
-        var wn1 = "Rozwiązanie: x1 = " + wynik1.toFixed(2);
+        var wn1 = "Rozwiązanie: x1 = " + wynik1.toFixed(1);
                
         var wynik2 = (- b - Math.sqrt(delta)) / 2 * a;
-        var wn2 = "Rozwiązanie: x2 = " + wynik1.toFixed(2);
+        var wn2 = ", x2 = " + wynik2.toFixed(1);
         document.getElementById("demo").innerHTML = wn1 + wn2;
       }
-
+      document.getElementById("demo").setAttribute('style', "display: block")
     }
   }
 
