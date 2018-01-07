@@ -1,6 +1,13 @@
 document.addEventListener("DOMContentLoaded", function(e) {
   var inputs = Array.from(document.getElementsByTagName("input"))
-  
+  var calculateButton = document.getElementById('calculate')
+  var inputsState = {
+  	"a_param": false,
+  	"b_param": false, 
+  	"c_param": false
+  }
+
+ 
   inputs.forEach(function(el, i) {
   	el.addEventListener('click', function(e) {
   		var input = e.currentTarget
@@ -13,6 +20,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
   	el.addEventListener("keyup", function(e) {
   		var input = e.currentTarget;
   		isValueValid(input)
+  		console.log(inputsState)
   	}); 
   })
   
@@ -46,18 +54,25 @@ document.addEventListener("DOMContentLoaded", function(e) {
 
   //sprawdzam ze podane wartości są poprawne//
   function isValueValid(input) {
-		const value = input.value
+		const value = input.value // definiuje zmienna
+		const id = input.getAttribute("id")
   	if (!value.match(/^\-?(?:0|[1-9][0-9]*)$/)) {
 			input.style = "border: 1px solid #af0903;background-color: #f28d8a; color:#af0903"
-			
+			calculateButton.setAttribute("disabled", null)
+			calculateButton.style = "background-color: grey"
+      inputsState[id] = false
   		return false
+  	} else {
+  		input.style = "" //Czyszcze style//
+  		calculateButton.removeAttribute("disabled")
+  		calculateButton.style = ''
+  		inputsState[id] = true
+   	  return true 
   	}
-  	input.style = ""
-  	return true
   };
 
   
-  document.getElementById('calculate').addEventListener("click", function(e) {
+  calculateButton.addEventListener("click", function(e) {
   	var a = document.getElementById("a_param");
   	var b = document.getElementById("b_param");
   	var c = document.getElementById("c_param");
