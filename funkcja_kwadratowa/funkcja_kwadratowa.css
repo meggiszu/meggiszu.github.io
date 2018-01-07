@@ -47,6 +47,11 @@ color: #428c42;
 /* Background pattern from Subtle Patterns */
 }
 
+.invalid-value{
+border: 2px solid #af0903;
+background-color: #f2635e;	
+}
+
 button[type=button]
 {
 	width: 300px;
