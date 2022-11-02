@@ -1,0 +1,303 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #946f6f;
+}
+
+body {
+  font-family: "Cairo", serif;
+  font-size: 20px;
+}
+
+nav.menu.sticky {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  text-align: center;
+  border-bottom: 1px dotted #968f8f;
+  z-index: 2;
+}
+
+span {
+  display: inline-block;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-transform: uppercase;
+  font-size: 18px;
+  color: #000;
+  cursor: pointer;
+}
+
+
+nav span:hover {
+  transition: all 0.4s ease-out;
+  text-decoration: none;
+  color: #946f6f;
+}
+
+
+a.navigation-menu-button {
+  display: none;
+  color: #000;
+  text-decoration: none;
+
+
+}
+
+@media screen and (max-width: 608px) {
+  span {display: none;}
+  a.navigation-menu-button {
+    float: left;
+    display: block;
+    position: absolute;
+    left: 10px;
+    top: 0;
+  }
+}
+
+@media screen and (max-width: 608px){
+  nav.menu.sticky.responsive {
+    position: fixed;
+    right: 0;
+    top: 0;
+  }
+
+  nav.responsive span {
+    float: none;
+    display: block;
+    text-align: center;
+  }
+
+}
+
+
+
+header {
+  background-image: url('../img/office.jpeg');
+  background-size: cover;
+  min-height: 100vh;
+
+  text-align: center;
+  line-height: 100px;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.container {
+  padding-top: 50px;
+  text-align: center;
+}
+
+h1 {
+  color: #484a4c;
+  font-size: 5.0rem;
+  padding: 110px 40px 0 40px;
+  text-align: center;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+h2 {
+  color: #484a4c;
+  font-size: 3rem;
+  text-align: center;
+  font-weight: normal;
+}
+
+
+h3 {
+
+  line-height: 100px;
+  font-size: 2.3rem;
+  color: #946f6f;
+  font-weight: normal;
+  text-transform: uppercase;
+  padding-top: 35px;
+  padding-bottom: 15px;
+}
+
+.about_me {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.insurance {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.flex_container {
+  margin: 30px;
+  display: flex;
+  width: 85vw;
+  padding-top: 30px;
+  }
+
+
+.photo_left {
+
+  width: 30vw;
+  margin-top: 7px;
+  margin-left: 30px;
+}
+
+.photos {
+  width: 200px;
+  height: 200px;
+  margin-top: 40px;
+  margin-left: 30px;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+}
+
+.hovereffect {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  border: 10px solid #e2e2e2;
+}
+
+
+.photo_right {
+  width: 60vw;
+  margin-top: 30px;
+  margin-left: 25px;
+}
+
+ li {
+  list-style-type: square
+}
+
+ul {
+  list-style-position: outside;
+}
+
+h4 {
+  font-size: 1.7rem;
+}
+
+.adress {
+  width: 100%;
+  text-align: center;
+  line-height: 2.0;
+  padding-bottom: 10px;
+  }
+
+h5 {
+  font-size: 1.4rem;
+  text-decoration: none !important;
+}
+
+.map {
+
+  width: 100%;
+  padding-top: 15px;
+  text-align: center;
+  }
+
+footer {
+  text-align: center;
+  padding: 0.3rem;
+  background-color: #eeeeee;
+  width: 100%;
+  opacity: 0.6;
+  color: #616469;
+  font-size: 1.0rem;
+}
+
+hr {
+  border: 0;
+  border-top: 1px dotted lightgrey;
+  width: 100%;
+}
+hr.underline {
+  width: 40%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+@media  (max-width: 768px) {
+  h1 {
+    padding: 0;
+    font-size: 2.7rem;
+  }
+
+  h2 {
+    font-size: 2.2rem;
+  }
+
+  h3 {
+    font-size: 1.7rem;
+  }
+
+  h4 {
+    font-size: 1.5rem;
+  }
+  h5 {
+    font-size: 1.3rem;
+  }
+
+  nav.menu a {
+  font-size: 27px;
+  font-weight: bold;
+  color: #484a4c;
+  }
+
+  header {
+   min-height: 60vh;
+ }
+
+  .photo_left {
+    margin: 0;
+    display: none;
+  }
+
+  .photo_right {
+    margin left: 0;
+    width: 100%;
+  }
+
+  .container {
+    padding-top: 28px;
+  }
+
+
+  hr.underline {
+    display: none;
+  }
+}
+
+@media (min-width: 769px) {
+  h1 {
+    font-size: 3.6rem;
+    padding: 0;
+
+  }
+  nav.menu.sticky {
+    font-size: 19px;
+
+  }
+}
+
+@media (min-width: 992px) {
+  h1 {
+    font-size:5rem;
+    padding: 110px 40px 0 40px;
+
+
+  }
+  nav.menu.sticky {
+    font-size: 20px;
+
+  }
+}
